@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TinyLink – Stats</title>
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .back {
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .box {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #444;
+    }
+
+    .value {
+      color: #000;
+    }
+
+    #status {
+      padding: 10px 0;
+      font-size: 16px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="/" class="back">⬅ Back to Dashboard</a>
+
+  <h1>Link Statistics</h1>
+
+  <!-- Loading / Error message -->
+  <div id="status">Loading...</div>
+
+  <!-- Stats box -->
+  <div id="statsBox" class="box hidden">
+    <p><span class="label">Shortcode:</span> <span id="codeVal" class="value"></span></p>
+    <p><span class="label">Target URL:</span> <span id="targetVal" class="value"></span></p>
+    <p><span class="label">Total Clicks:</span> <span id="clicksVal" class="value"></span></p>
+    <p><span class="label">Last Clicked:</span> <span id="lastVal" class="value"></span></p>
+  </div>
+
+  <script src="/stats.js"></script>
+</body>
+</html>
