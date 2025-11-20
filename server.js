@@ -55,7 +55,6 @@ app.get("/api/links", async (req, res) => {
   const result = await pool.query(
     "SELECT code, target_url, total_clicks, last_clicked FROM links ORDER BY created_at DESC"
   );
-  console.log(result.rows.length);
   res.json(result.rows);
 });
 
